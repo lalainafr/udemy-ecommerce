@@ -1,3 +1,5 @@
+
+
 body{
     position: relative;
 }
@@ -6,6 +8,13 @@ body{
     color: #FFF;
 }
 
+.product-item{
+    text-align: center;
+}
+
+.product-item span{
+    font-size: 14px;
+}
 
 .footer-custom {
     text-align: center;
@@ -15,3 +24,12 @@ body{
     background-color: #dfeaff;
     padding-top: 20px;
 }
+
+.product-price{
+    font-weight: bold;
+}
+
+.product-detail{
+    font-size: 14px;
+}
+

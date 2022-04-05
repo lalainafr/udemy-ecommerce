@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Produit - La boutique Malgache!{% endblock %}
+
+{% block content %}
+<h1>Nos produits</h1>
+
+<div class="row">
+    {% for product in products %}
+    <div class="col-md-4">
+        <div class="product-item">
+            <a href="{{path('app_product_show', {'slug': product.slug})}}"><img src="/uploads/{{product.illustration}}"
+                    alt="{{product.name}}" class="img-fluid"></img></a>
+            <h5>{{product.name}}</h5>
+            <span>{{product.subtitle}}</span> <br>
+            {# Formater le prix (à diviser par 100 pour voir le prix exact Vs easy Admin#}
+            {# mettre 2 zéro à la fin et espacer de , #}
+            <span class="product-price">{{(product.price / 100) | number_format(2, ',', '.')}} €</span> <br>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{product.name}} - La boutique Malgache!{% endblock %}
+
+{% block content %}
+<h1>Détail du produit {{product.name}}</h1>
+
+<div class="row">
+    <div class="col-md-5">
+        <img src="/uploads/{{product.illustration}}" alt="{{product.name}}" class="img-fluid">
+    </div>
+    <div class="col-md-7 my-auto">
+        <h3>{{product.name}}</h3>
+        {{product.subtitle}} <br><br>
+        <span class="product-price">{{(product.price/100)|number_format(2,',','.')}} €</span><br>
+        <hr>
+        {{product.description}} <br><br>
+        <a href="" class="btn btn-primary btn-sm">Ajouter au panier</a>
+    </div>
+</div>
+
+{% endblock %}
